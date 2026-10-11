@@ -1,7 +1,10 @@
 import { Circle } from "lucide-react";
 import logo from "../../assets/logo.png";
+import { useRealTime } from "../../hooks/useRealTime";
 
 export default function Header() {
+    const time = useRealTime();
+
     return (
         <header className="bg-transparent px-8 py-4 flex justify-between items-center font-mono tracking-tight fix">
             <div className="flex items-center">
@@ -23,7 +26,7 @@ export default function Header() {
                 </div>
                 
                 <div className="flex items-center gap-2 text-[11px] text-gray-500 font-mono">
-                    <span>20:25</span>
+                    <span>{time}</span>
                     <span className="text-gray-700">——</span>
                 </div>
             </div>
