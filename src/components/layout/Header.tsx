@@ -6,7 +6,7 @@ export default function Header() {
     const time = useRealTime();
 
     return (
-        <header className="bg-transparent px-8 py-4 flex justify-between items-center font-mono tracking-tight fix">
+        <header className="bg-transparent w-full px-8 py-4 flex justify-between items-center font-mono tracking-tight fixed">
             <div className="flex items-center">
                 <img src={logo} alt="Logo" className="h-10 w-auto object-contain brightness-90 hover:brightness-100 transition-all" />
             </div>
