@@ -21,6 +21,8 @@ const links = [
     { href: "mailto:wassimrifi.dev@gmail.com", label: "Email", Icon: Mail },
 ];
 
+const words = ["Code", "Build", "Improve", "Repeat"];
+
 export default function SideBar() {
     const [active_section, setSection] = useState("home");
 
@@ -61,8 +63,8 @@ export default function SideBar() {
                 </ul>
             </nav>
 
-            <div className="flex justify-start">
-                <div className="flex flex-col items-center gap-5">
+            <div className="flex flex-col justify-start gap-17">
+                <div className="flex flex-col items-start gap-5">
                     {links.map(({ href, label, Icon }) => (
                         <Link
                             key={label}
@@ -76,8 +78,12 @@ export default function SideBar() {
                         </Link>
                     ))}
                 </div>
-                
-                <div></div>
+
+                <div className="flex flex-col gap-2 font-mono text-sm text-[#9AA0B2]">
+                    {words.map((word) => (
+                        <p key={word}>{word}</p>
+                    ))}
+                </div>
             </div>
         </aside>
     )
