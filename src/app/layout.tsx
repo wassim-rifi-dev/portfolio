@@ -10,7 +10,7 @@ export const jetbrainsMono = JetBrains_Mono({
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="min-h-full flex flex-col" suppressHydrationWarning>{children}</body>
+      <body className="min-h-full flex flex-col bg-[#1A1D28]" suppressHydrationWarning>{children}</body>
     </html>
   );
 }
