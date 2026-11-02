@@ -2,6 +2,9 @@
 
 import { jetbrainsMono } from "@/app/layout";
 import { useState } from "react";
+import { Mail } from "lucide-react";
+import { FiGithub, FiLinkedin } from "react-icons/fi";
+import Link from "next/link";
 
 const sections = [
     { name: "home", href:"#" },
@@ -10,6 +13,12 @@ const sections = [
     { name: "projects", href:"#projects" },
     { name: "formation", href:"#formation" },
     { name: "contact", href:"#contact" },
+];
+
+const links = [
+    { href: "https://github.com/wassim-rifi-dev", label: "GitHub", Icon: FiGithub },
+    { href: "https://www.linkedin.com/in/wassim-rifi-0b842839a/", label: "LinkedIn", Icon: FiLinkedin },
+    { href: "mailto:wassimrifi.dev@gmail.com", label: "Email", Icon: Mail },
 ];
 
 export default function SideBar() {
@@ -51,6 +60,25 @@ export default function SideBar() {
                     })}
                 </ul>
             </nav>
+
+            <div className="flex justify-start">
+                <div className="flex flex-col items-center gap-5">
+                    {links.map(({ href, label, Icon }) => (
+                        <Link
+                            key={label}
+                            href={href}
+                            target={href.startsWith("http") ? "_blank" : undefined}
+                            rel="noopener noreferrer"
+                            aria-label={label}
+                            className="text-gray-400 transition-colors hover:text-white"
+                        >
+                            <Icon className="h-5 w-5" strokeWidth={2} />
+                        </Link>
+                    ))}
+                </div>
+                
+                <div></div>
+            </div>
         </aside>
     )
 }
