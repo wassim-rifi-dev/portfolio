@@ -23,24 +23,25 @@ export default function SideBar() {
                         const isActive = active_section === section.name;
 
                         return (
-                            <li key={section.name} className="flex items-center">
+                            <li key={section.name} className="group flex items-center">
                                 <span className="relative mr-4 flex h-2 w-2">
-                                    { isActive && (
+                                    {isActive ? (
                                         <>
                                             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#8B8AFF] opacity-75" />
                                             <span className="relative inline-flex h-2 w-2 rounded-full bg-[#8B8AFF]" />
                                         </>
-                                    )
-                                    }
+                                    ) : (
+                                        <span className="inline-flex h-2 w-2 scale-50 rounded-full bg-[#8B8AFF]/50 opacity-0 transition-all duration-200 group-hover:scale-100 group-hover:opacity-100" />
+                                    )}
                                 </span>
 
                                 <a
                                     href={section.href}
                                     onClick={() => setSection(section.name)}
-                                    className={`font-mono text-base tracking-tight transition-colors duration-200 ${
-                                        isActive ? 
-                                            "text-[#8B8AFF]" :
-                                            "text-[#9AA0B2] hover:text-[#C7C9D9]"
+                                    className={`text-base tracking-tight transition-all duration-200 ${
+                                        isActive
+                                            ? "translate-x-0 text-[#8B8AFF]"
+                                            : "-translate-x-2 text-[#9AA0B2] group-hover:translate-x-0 group-hover:text-[#8B8AFF]"
                                     }`}
                                 >
                                     {section.name}
