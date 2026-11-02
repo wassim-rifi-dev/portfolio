@@ -70,7 +70,7 @@ export default function SideBar() {
                             target={href.startsWith("http") ? "_blank" : undefined}
                             rel="noopener noreferrer"
                             aria-label={label}
-                            className="text-gray-400 transition-colors hover:text-white"
+                            className="text-[#9AA0B2] transition-colors hover:text-[#E6E8EF]"
                         >
                             <Icon className="h-5 w-5" strokeWidth={2} />
                         </Link>
