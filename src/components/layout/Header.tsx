@@ -4,18 +4,18 @@ import { jetbrainsMono } from "@/app/layout";
 
 export default function Header() {
     return (
-        <header className="bg-transparent w-full px-8 py-4 flex justify-between items-center font-mono tracking-tight fixed z-39">
+        <header className="bg-transparent w-full px-4 py-3 sm:px-8 sm:py-4 flex justify-between items-center font-mono tracking-tight fixed z-39">
             <div className="flex items-center">
                 <Image
                     src="/images/logo.png"
                     alt="Logo"
                     width={150}
                     height={40}
-                    className="h-10 w-auto object-contain brightness-90 hover:brightness-100 transition-all"
+                    className="h-9 sm:h-10 w-auto object-contain brightness-90 hover:brightness-100 transition-all"
                 />
             </div>
 
-            <div className={"flex items-center gap-5 text-[#9AA0B2] text-xs font-light tracking-tight " + jetbrainsMono.className}>
+            <div className={"flex items-center gap-3 sm:gap-5 text-[#9AA0B2] text-[11px] sm:text-xs font-light whitespace-nowrap tracking-tight " + jetbrainsMono.className}>
                 <div>
                     <span className="relative flex h-2 w-2">
                         <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-75" />
@@ -25,12 +25,12 @@ export default function Header() {
                     </span>
                 </div>
 
-                <div className="flex gap-2.5">
+                <div className="flex flex-col items-end gap-0.5 sm:flex-row sm:items-center sm:gap-2.5">
                     <div>
                         <p>Disponible <span className="mx-1">•</span> Basé au Maroc</p>
                     </div>
                     
-                    <div className="text-gray-600">
+                    <div className="hidden sm:block text-gray-600">
                         <p>|</p>
                     </div>
 
