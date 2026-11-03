@@ -15,11 +15,18 @@ export default function Hero() {
 
                 <p className="mt-4 text-2xl text-[#C9CDD8] md:text-3xl">Salut, je suis</p>
 
-                <h1 className="mt-3 text-6xl font-bold leading-none text-]#E6E8EF md:text-8xl">
-                    Wassim
-                    <br />
-                    Rifi
-                </h1>
+                <div className="relative mt-3">
+                    <h1 className="text-6xl font-bold leading-none text-[#E6E8EF] md:text-8xl">
+                        Wassim
+                        <br />
+                        Rifi
+                    </h1>
+
+                    <span
+                        aria-hidden="true"
+                        className="absolute bottom-[7%] right-0 hidden h-2.5 w-12 bg-[#8B8AFF] shadow-[0_0_12px_#8B8AFF,0_0_30px_#8B8AFF80] md:block"
+                    />
+                </div>
 
                 <Typewrite />
 
