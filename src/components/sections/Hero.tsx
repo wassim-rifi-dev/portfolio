@@ -1,4 +1,5 @@
 import { jetbrainsMono } from "@/app/layout";
+import Typewrite from "../ui/Typewriter";
 
 export default function Hero() {
     return (
@@ -20,9 +21,7 @@ export default function Hero() {
                     Rifi
                 </h1>
 
-                <h3 className="mt-10 text-xl text-[#8B8AFF] md:text-2xl">
-                    Développeur Full-Stack Junior
-                </h3>
+                <Typewrite />
 
                 <p className="mt-6 max-w-xl text-base leading-loose text-[#9AA0B2] md:text-lg">
                     Je construis des API REST avec Laravel et Spring Boot, et des interfaces
