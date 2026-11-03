@@ -1,7 +1,7 @@
 import { caveat, jetbrainsMono } from "@/app/layout";
 import GridSection from "../ui/GridSection";
+import HeroPortrait from "../ui/HeroPortrait";
 import Typewrite from "../ui/Typewriter";
-import Image from "next/image";
 
 export default function Hero() {
     return (
@@ -52,16 +52,7 @@ export default function Hero() {
                     </div>
                 </div>
 
-                <div className="group relative aspect-3/4 w-full max-w-md justify-self-end overflow-hidden border border-[#2A2F40] bg-[#0A0A10]">
-                    <Image
-                        src="/images/me_white_black.webp"
-                        alt="Wassim Rifi"
-                        fill
-                        priority
-                        sizes="(min-width: 768px) 450px, 100vw"
-                        className="object-cover grayscale transition duration-500 group-hover:grayscale-0"
-                    />
-
+                <HeroPortrait>
                     <p
                         className={`absolute bottom-8 right-6 -rotate-6 text-right text-3xl leading-tight text-[#C9CDD8]/90 ${caveat.className}`}
                     >
@@ -69,7 +60,7 @@ export default function Hero() {
                         <br />
                         bigger dreams.
                     </p>
-                </div>
+                </HeroPortrait>
                 </div>
         </section>
     );
