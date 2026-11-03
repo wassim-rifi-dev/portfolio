@@ -46,7 +46,7 @@ export default function Typewrite() {
 
 
     return (
-        <h3 className="mt-10 text-xl text-[#8B8AFF] md:text-2xl">
+        <h3 className="mt-10 min-h-[2lh] text-xl text-[#8B8AFF] md:text-2xl 2xl:min-h-0">
             {text}
             <span
                 aria-hidden="true"

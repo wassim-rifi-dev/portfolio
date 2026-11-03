@@ -10,7 +10,7 @@ export default function Home() {
       <div className="flex w-full">
         <SideBar />
 
-        <main className="flex-1 ml-56 pt-24 min-h-screen relative">
+        <main className="flex-1 lg:ml-56 pt-24 min-h-screen relative">
           <Hero />
         </main>
       </div>

@@ -5,17 +5,17 @@ import Typewrite from "../ui/Typewriter";
 
 export default function Hero() {
     return (
-        <section id="home" className={`relative px-15 pt-8 pb-23 ` + jetbrainsMono.className}>
+        <section id="home" className={`relative px-5 pt-4 pb-16 sm:px-8 lg:px-10 lg:pt-8 lg:pb-23 xl:px-15 ` + jetbrainsMono.className}>
             <GridSection />
 
-            <div className="relative grid items-center gap-16 md:grid-cols-2">
+            <div className="relative grid items-center gap-12 lg:grid-cols-2 lg:gap-10 xl:gap-16">
                 <div className="flex flex-col font-mono">
                     <p className="text-[#8B8AFF]">&gt; <span className="text-[#9AA0B2]">whoami</span></p>
 
                     <p className="mt-4 text-2xl text-[#C9CDD8] md:text-3xl">Salut, je suis</p>
 
-                    <div className="relative mt-3">
-                        <h1 className="text-6xl font-bold leading-none text-[#E6E8EF] md:text-8xl">
+                    <div className="relative mt-3 w-fit xl:w-auto">
+                        <h1 className="text-6xl font-bold leading-none text-[#E6E8EF] md:text-8xl lg:text-7xl xl:text-8xl">
                             Wassim
                             <br />
                             Rifi
@@ -34,10 +34,10 @@ export default function Hero() {
                         web avec React.js et Angular — avec du code propre et un vrai objectif.
                     </p>
 
-                    <div className="mt-10 flex flex-wrap gap-4">
+                    <div className="mt-8 flex flex-col gap-4 sm:mt-10 sm:flex-row sm:flex-wrap">
                         <a
                             href="#projects"
-                            className="border border-[#8B8AFF] bg-[#10112A] px-7 py-4 text-sm font-semibold text-[#E6E8EF] cursor-pointer"
+                            className="border border-[#8B8AFF] bg-[#10112A] px-7 py-4 text-center text-sm font-semibold text-[#E6E8EF] cursor-pointer"
                         >
                             Voir mes projets →
                         </a>
@@ -45,7 +45,7 @@ export default function Hero() {
                         <a
                             href="/cv/CV - Wassim Rifi.pdf"
                             download
-                            className="border border-[#2A2F40] px-7 py-4 text-sm text-[#C9CDD8] cursor-pointer"
+                            className="border border-[#2A2F40] px-7 py-4 text-center text-sm text-[#C9CDD8] cursor-pointer"
                         >
                             Télécharger CV ↓
                         </a>

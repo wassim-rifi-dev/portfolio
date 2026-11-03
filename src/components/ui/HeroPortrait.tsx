@@ -27,7 +27,7 @@ export default function HeroPortrait({ children }: { children?: ReactNode }) {
         <div
             onPointerMove={handleMove}
             onPointerLeave={handleLeave}
-            className="relative aspect-3/4 w-full max-w-md justify-self-end overflow-hidden border border-[#2A2F40] bg-[#0A0A10]"
+            className="relative aspect-3/4 w-full max-w-md justify-self-center overflow-hidden lg:justify-self-end border border-[#2A2F40] bg-[#0A0A10]"
         >
             <Image
                 src="/images/me_white_black.webp"
