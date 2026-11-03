@@ -42,7 +42,7 @@ export default function Typewrite() {
         }
 
         return () => clearTimeout(timeout);
-    } , [text , deleting , index , DEFAULT_WORDS , TYPE_SPEED , DELETE_SPEED , PAUSE]);
+    } , [text , deleting , index]);
 
 
     return (
