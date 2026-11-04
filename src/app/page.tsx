@@ -1,5 +1,6 @@
 import Header from "@/components/layout/Header";
 import SideBar from "@/components/layout/SideBar";
+import AboutMe from "@/components/sections/AboutMe";
 import Hero from "@/components/sections/Hero";
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
 
         <main className="flex-1 lg:ml-56 pt-24 min-h-screen relative">
           <Hero />
+          <AboutMe />
         </main>
       </div>
     </div>
