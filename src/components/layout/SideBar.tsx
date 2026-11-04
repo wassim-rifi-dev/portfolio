@@ -1,6 +1,6 @@
 'use client';
 
-import { jetbrainsMono } from "@/app/layout";
+import { jetbrainsMono } from "@/app/fonts";
 import { useEffect, useState } from "react";
 import { Mail, Menu, X } from "lucide-react";
 import { FiGithub, FiLinkedin } from "react-icons/fi";

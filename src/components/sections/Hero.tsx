@@ -1,4 +1,4 @@
-import { caveat, jetbrainsMono } from "@/app/layout";
+import { caveat, jetbrainsMono } from "@/app/fonts";
 import GridSection from "../ui/GridSection";
 import HeroPortrait from "../ui/HeroPortrait";
 import Typewrite from "../ui/Typewriter";

@@ -1,6 +1,6 @@
 import { Circle } from "lucide-react";
 import Image from "next/image";
-import { jetbrainsMono } from "@/app/layout";
+import { jetbrainsMono } from "@/app/fonts";
 
 export default function Header() {
     return (
