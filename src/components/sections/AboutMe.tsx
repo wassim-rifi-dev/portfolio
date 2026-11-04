@@ -7,14 +7,13 @@ export default function AboutMe() {
             <p className="text-sm tracking-widest text-[#8B8AFF]">01&nbsp;&nbsp;ABOUT ME</p>
 
             <div className="mt-5 flex flex-col gap-14 lg:flex-row lg:items-start lg:gap-16">
-                {/* Colonne gauche */}
                 <div className="lg:w-[38%] lg:shrink-0">
                     <h2 className="text-5xl md:text-6xl font-medium leading-tight text-[#E6E8EF]">
                         Plus que du code<span className="text-[#8B8AFF]">.</span>
                     </h2>
 
                     <p className="mt-8 text-base leading-8 text-[#9AA0B2]">
-                        Étudiant en développement Web Full-Stack à YouCode Nador — UM6P. J'aime transformer des idées en produits concrets, apprendre de nouvelles technologies et résoudre de vrais problèmes. Je recherche ma première opportunité professionnelle pour continuer à progresser.
+                        Étudiant en développement Web Full-Stack à YouCode Nador — UM6P. J&apos;aime transformer des idées en produits concrets, apprendre de nouvelles technologies et résoudre de vrais problèmes. Je recherche ma première opportunité professionnelle pour continuer à progresser.
                     </p>
 
                     <div className="mt-6 flex items-center gap-4 text-[#9AA0B2]">
@@ -28,7 +27,6 @@ export default function AboutMe() {
                     </div>
                 </div>
 
-                {/* Colonne droite */}
                 <div className="flex-1 space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-3 border border-zinc-800 divide-y md:divide-y-0 md:divide-x divide-zinc-800">
                         <div className="p-8">
@@ -43,7 +41,7 @@ export default function AboutMe() {
                             <Users size={24} className="text-[#8B8AFF]" />
                             <h3 className="mt-6 text-lg text-[#E6E8EF]">Travail en équipe</h3>
                             <p className="mt-4 text-base leading-7 text-[#9AA0B2]">
-                                Collaboration et communication claire avec l'équipe.
+                                Collaboration et communication claire avec l&apos;équipe.
                             </p>
                         </div>
 
