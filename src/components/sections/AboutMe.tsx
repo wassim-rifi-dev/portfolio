@@ -1,6 +1,9 @@
 import { jetbrainsMono } from "@/app/fonts";
 import { Code, MapPin, Sun, Timer, Users } from "lucide-react";
 
+const cardClassName =
+    "relative -mt-px border border-zinc-800 p-6 transition-colors duration-300 first:mt-0 hover:z-10 hover:border-[#8B8AFF] hover:bg-[#0E1020] sm:p-8 md:mt-0 md:-ml-px md:first:ml-0 xl:p-5 2xl:p-8";
+
 export default function AboutMe() {
     return (
         <section className={`relative px-5 pt-4 pb-16 sm:px-8 lg:px-10 lg:pt-8 lg:pb-23 xl:px-15 mt-10 ` + jetbrainsMono.className}>
@@ -28,8 +31,8 @@ export default function AboutMe() {
                 </div>
 
                 <div className="min-w-0 flex-1 space-y-6">
-                    <div className="grid grid-cols-1 md:grid-cols-3 border border-zinc-800 divide-y md:divide-y-0 md:divide-x divide-zinc-800">
-                        <div className="p-6 sm:p-8 xl:p-5 2xl:p-8">
+                    <div className="grid grid-cols-1 md:grid-cols-3">
+                        <div className={cardClassName}>
                             <Sun size={24} className="text-[#8B8AFF]" />
                             <h3 className="mt-6 text-lg text-[#E6E8EF]">Autonomie</h3>
                             <p className="mt-4 text-base leading-7 text-[#9AA0B2]">
@@ -37,7 +40,7 @@ export default function AboutMe() {
                             </p>
                         </div>
 
-                        <div className="p-6 sm:p-8 xl:p-5 2xl:p-8">
+                        <div className={cardClassName}>
                             <Users size={24} className="text-[#8B8AFF]" />
                             <h3 className="mt-6 text-lg text-[#E6E8EF]">Travail en équipe</h3>
                             <p className="mt-4 text-base leading-7 text-[#9AA0B2]">
@@ -45,7 +48,7 @@ export default function AboutMe() {
                             </p>
                         </div>
 
-                        <div className="p-6 sm:p-8 xl:p-5 2xl:p-8">
+                        <div className={cardClassName}>
                             <Timer size={24} className="text-[#8B8AFF]" />
                             <h3 className="mt-6 text-lg text-[#E6E8EF]">Gestion du temps</h3>
                             <p className="mt-4 text-base leading-7 text-[#9AA0B2]">
