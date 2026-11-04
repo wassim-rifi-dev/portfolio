@@ -129,10 +129,7 @@ export default function SideBar() {
                                     <a
                                         href={section.href}
                                         aria-current={isActive ? "location" : undefined}
-                                        onClick={() => {
-                                            setSection(section.name);
-                                            setIsOpen(false);
-                                        }}
+                                        onClick={() => setIsOpen(false)}
                                         className={`text-base tracking-tight transition-all duration-200 ${
                                             isActive
                                                 ? "translate-x-0 font-semibold text-[#8B8AFF]"
