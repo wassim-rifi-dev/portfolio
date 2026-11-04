@@ -26,6 +26,42 @@ const words = ["Code", "Build", "Improve", "Repeat"];
 export default function SideBar() {
     const [active_section, setSection] = useState("home");
     const [isOpen, setIsOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+        let frame = 0;
+
+        const update = () => {
+            frame = 0;
+            setIsScrolled(window.scrollY > 24);
+
+            const rendered = sections.flatMap(({ name }) => {
+                const element = document.getElementById(name);
+                return element ? [{ name, top: element.getBoundingClientRect().top }] : [];
+            });
+
+            const isAtBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+            const current = isAtBottom
+                ? rendered.at(-1)
+                : rendered.filter(({ top }) => top <= window.innerHeight * 0.4).at(-1);
+
+            if (current) setSection(current.name);
+        };
+
+        const requestUpdate = () => {
+            if (!frame) frame = requestAnimationFrame(update);
+        };
+
+        requestUpdate();
+        window.addEventListener("scroll", requestUpdate, { passive: true });
+        window.addEventListener("resize", requestUpdate);
+
+        return () => {
+            cancelAnimationFrame(frame);
+            window.removeEventListener("scroll", requestUpdate);
+            window.removeEventListener("resize", requestUpdate);
+        };
+    }, []);
 
     useEffect(() => {
         if (!isOpen) return;
@@ -61,9 +97,9 @@ export default function SideBar() {
 
             <aside
                 id="sidebar"
-                className={`fixed left-0 top-0 z-40 flex h-dvh w-56 flex-col justify-between gap-6 overflow-y-auto bg-[#1A1D28] px-8 pb-6 pt-14 scrollbar-none transition-[translate,visibility] duration-300 [&::-webkit-scrollbar]:hidden lg:visible lg:translate-x-0 lg:gap-10 lg:bg-transparent lg:pb-8 lg:pt-28 lg:transition-none ${
+                className={`fixed left-0 top-0 z-40 flex h-dvh w-56 flex-col justify-between gap-6 overflow-y-auto bg-[#1A1D28] px-8 pb-6 pt-14 scrollbar-none transition-[translate,visibility] duration-300 [&::-webkit-scrollbar]:hidden lg:visible lg:translate-x-0 lg:gap-10 lg:border-r lg:bg-transparent lg:pb-8 lg:pt-28 lg:transition-[border-color] ${
                     isOpen ? "translate-x-0" : "invisible -translate-x-full"
-                } ${jetbrainsMono.className}`}
+                } ${isScrolled ? "lg:border-[#23273A]" : "lg:border-transparent"} ${jetbrainsMono.className}`}
             >
                 <nav className="relative border-l border-[#23273A] pl-6">
                     <ul className="space-y-3 py-2 lg:space-y-5 lg:py-4">
@@ -71,7 +107,14 @@ export default function SideBar() {
                             const isActive = active_section === section.name;
 
                             return (
-                                <li key={section.name} className="group flex items-center">
+                                <li key={section.name} className="group relative flex items-center">
+                                    <span
+                                        aria-hidden="true"
+                                        className={`absolute -left-6.25 top-1/2 h-6 w-px -translate-y-1/2 bg-[#8B8AFF] shadow-[0_0_8px_#8B8AFF] transition-transform duration-300 ${
+                                            isActive ? "scale-y-100" : "scale-y-0"
+                                        }`}
+                                    />
+
                                     <span className="relative mr-4 flex h-2 w-2">
                                         {isActive ? (
                                             <>
@@ -85,13 +128,14 @@ export default function SideBar() {
 
                                     <a
                                         href={section.href}
+                                        aria-current={isActive ? "location" : undefined}
                                         onClick={() => {
                                             setSection(section.name);
                                             setIsOpen(false);
                                         }}
                                         className={`text-base tracking-tight transition-all duration-200 ${
                                             isActive
-                                                ? "translate-x-0 text-[#8B8AFF]"
+                                                ? "translate-x-0 font-semibold text-[#8B8AFF]"
                                                 : "-translate-x-2 text-[#9AA0B2] group-hover:translate-x-0 group-hover:text-[#8B8AFF]"
                                         }`}
                                     >
