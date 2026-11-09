@@ -1,6 +1,7 @@
 import { jetbrainsMono } from "@/app/fonts";
 import { Circle, GitBranch } from "lucide-react";
 import IdeSkills from "../ui/IdeSkills";
+import SkillsMarquee from "../ui/SkillsMarquee";
 
 export default function Skills() {
     return (
@@ -58,6 +59,10 @@ export default function Skills() {
                 </span>
                 <span>TypeScript</span>
                 <span>UTF-8</span>
+            </div>
+
+            <div className="mt-15">
+                <SkillsMarquee />
             </div>
         </section>
     )

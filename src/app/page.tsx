@@ -12,7 +12,7 @@ export default function Home() {
       <div className="flex w-full">
         <SideBar />
 
-        <main className="flex-1 lg:ml-56 pt-24 min-h-screen relative">
+        <main className="flex-1 min-w-0 lg:ml-56 pt-24 min-h-screen relative">
           <Hero />
           <AboutMe />
           <Skills />
