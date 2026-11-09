@@ -6,7 +6,7 @@ const cardClassName =
 
 export default function AboutMe() {
     return (
-        <section className={`relative px-5 py-16 sm:px-8 lg:px-10 lg:pt-8 lg:pb-23 xl:px-15 mt-10 ` + jetbrainsMono.className}>
+        <section id="about" className={`relative scroll-mt-20 px-5 py-16 sm:px-8 lg:px-10 lg:pt-8 lg:pb-23 xl:px-15 mt-10 ` + jetbrainsMono.className}>
             <p className="text-sm tracking-widest text-[#8B8AFF]">01&nbsp;&nbsp;ABOUT ME</p>
 
             <div className="mt-5 flex flex-col gap-10 sm:gap-14 xl:flex-row xl:items-start xl:gap-10 2xl:gap-16">

@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" data-scroll-behavior="smooth" className="scroll-smooth motion-reduce:scroll-auto" suppressHydrationWarning>
       <body className="min-h-full flex flex-col bg-[#1A1D28]" suppressHydrationWarning>{children}</body>
     </html>
   );
