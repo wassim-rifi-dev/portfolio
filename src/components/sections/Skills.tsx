@@ -121,8 +121,67 @@ export default function Skills() {
                             </div>
                         </div>
 
-                        <div className="bg-[#0A0B11]">
-                            test
+                        <div className="bg-[#0A0B11] py-6 font-mono text-[15px] leading-8 overflow-x-auto">
+                            <div className="flex">
+                                <span className="w-16 shrink-0 pr-6 text-right select-none text-[#3A3F55]">1</span>
+                                <code className="whitespace-pre text-[#6E7489] italic">{"// skills/frontend.ts — 8 technologies"}</code>
+                            </div>
+                            <div className="flex bg-[#12142A]">
+                                <span className="w-16 shrink-0 pr-6 text-right select-none text-[#8B8AFF]">2</span>
+                                <code className="whitespace-pre text-[#E6E8EF]"><span className="text-[#8B8AFF]">export const </span><span className="text-[#7DD3FC]">frontend</span> = {"{"}</code>
+                            </div>
+                            <div className="flex">
+                                <span className="w-16 shrink-0 pr-6 text-right select-none text-[#3A3F55]">3</span>
+                                <code className="whitespace-pre text-[#E6E8EF]">  <span className="text-[#7DD3FC]">role</span>: <span className="text-[#A6E3A1]">{'"Interfaces modernes et responsives"'}</span>,</code>
+                            </div>
+                            <div className="flex">
+                                <span className="w-16 shrink-0 pr-6 text-right select-none text-[#3A3F55]">4</span>
+                                <code className="whitespace-pre text-[#E6E8EF]">  <span className="text-[#7DD3FC]">stack</span>: [</code>
+                            </div>
+                            <div className="flex">
+                                <span className="w-16 shrink-0 pr-6 text-right select-none text-[#3A3F55]">5</span>
+                                <code className="whitespace-pre text-[#E6E8EF]">    <span className="text-[#A6E3A1]">{'"React.js"'}</span>,</code>
+                            </div>
+                            <div className="flex">
+                                <span className="w-16 shrink-0 pr-6 text-right select-none text-[#3A3F55]">6</span>
+                                <code className="whitespace-pre text-[#E6E8EF]">    <span className="text-[#A6E3A1]">{'"React Native"'}</span>,</code>
+                            </div>
+                            <div className="flex">
+                                <span className="w-16 shrink-0 pr-6 text-right select-none text-[#3A3F55]">7</span>
+                                <code className="whitespace-pre text-[#E6E8EF]">    <span className="text-[#A6E3A1]">{'"Angular"'}</span>,</code>
+                            </div>
+                            <div className="flex">
+                                <span className="w-16 shrink-0 pr-6 text-right select-none text-[#3A3F55]">8</span>
+                                <code className="whitespace-pre text-[#E6E8EF]">    <span className="text-[#A6E3A1]">{'"TypeScript"'}</span>,</code>
+                            </div>
+                            <div className="flex">
+                                <span className="w-16 shrink-0 pr-6 text-right select-none text-[#3A3F55]">9</span>
+                                <code className="whitespace-pre text-[#E6E8EF]">    <span className="text-[#A6E3A1]">{'"JavaScript ES6+"'}</span>,</code>
+                            </div>
+                            <div className="flex">
+                                <span className="w-16 shrink-0 pr-6 text-right select-none text-[#3A3F55]">10</span>
+                                <code className="whitespace-pre text-[#E6E8EF]">    <span className="text-[#A6E3A1]">{'"HTML"'}</span>,</code>
+                            </div>
+                            <div className="flex">
+                                <span className="w-16 shrink-0 pr-6 text-right select-none text-[#3A3F55]">11</span>
+                                <code className="whitespace-pre text-[#E6E8EF]">    <span className="text-[#A6E3A1]">{'"CSS"'}</span>,</code>
+                            </div>
+                            <div className="flex">
+                                <span className="w-16 shrink-0 pr-6 text-right select-none text-[#3A3F55]">12</span>
+                                <code className="whitespace-pre text-[#E6E8EF]">    <span className="text-[#A6E3A1]">{'"Tailwind CSS"'}</span>,</code>
+                            </div>
+                            <div className="flex">
+                                <span className="w-16 shrink-0 pr-6 text-right select-none text-[#3A3F55]">13</span>
+                                <code className="whitespace-pre text-[#E6E8EF]">  ],</code>
+                            </div>
+                            <div className="flex">
+                                <span className="w-16 shrink-0 pr-6 text-right select-none text-[#3A3F55]">15</span>
+                                <code className="whitespace-pre text-[#E6E8EF]">  <span className="text-[#7DD3FC]">learning</span>: <span className="text-[#8B8AFF]">true</span>,</code>
+                            </div>
+                            <div className="flex">
+                                <span className="w-16 shrink-0 pr-6 text-right select-none text-[#3A3F55]">16</span>
+                                <code className="whitespace-pre text-[#E6E8EF]">{"};"}</code>
+                            </div>
                         </div>
                     </div>
                 </div>
