@@ -84,7 +84,7 @@ export default function IdeSkills() {
 
                 <div
                     className="bg-[#0A0B11] py-6 font-mono text-[15px] leading-8 overflow-x-auto"
-                    style={{ height: (Math.max(...skills.map(s => s.stack.length)) + 7) * 32 + 48 }}
+                    style={{ height: (Math.max(...skills.map(s => s.stack.length)) + 10) * 32 + 48 }}
                 >
                     {skills.filter(s => s.category === tap).map((skill) => (
                         <div key={skill.category}>
@@ -118,14 +118,52 @@ export default function IdeSkills() {
                             </div>
                             <div className="flex">
                                 <span className="w-16 shrink-0 pr-6 text-right select-none text-[#3A3F55]">{skill.stack.length + 6}</span>
-                                <code className="whitespace-pre text-[#E6E8EF]">  <span className="text-[#7DD3FC]">learning</span>: <span className="text-[#8B8AFF]">true</span>,</code>
+                                <code className="whitespace-pre text-[#E6E8EF]">  <span className="text-[#7DD3FC]">usedIn</span>: [{skill.usedIn.map((project, i) => (
+                                    <span key={project}><span className="text-[#A6E3A1]">&quot;{project}&quot;</span>{i < skill.usedIn.length - 1 ? ", " : ""}</span>
+                                ))}],</code>
                             </div>
                             <div className="flex">
                                 <span className="w-16 shrink-0 pr-6 text-right select-none text-[#3A3F55]">{skill.stack.length + 7}</span>
+                                <code className="whitespace-pre text-[#E6E8EF]">  <span className="text-[#7DD3FC]">learning</span>: <span className="text-[#8B8AFF]">true</span>,</code>
+                            </div>
+                            <div className="flex">
+                                <span className="w-16 shrink-0 pr-6 text-right select-none text-[#3A3F55]">{skill.stack.length + 8}</span>
                                 <code className="whitespace-pre text-[#E6E8EF]">{"};"}</code>
+                            </div>
+                            <div className="flex">
+                                <span className="w-16 shrink-0 pr-6 text-right select-none text-[#3A3F55]">{skill.stack.length + 9}</span>
+                                <code className="whitespace-pre"> </code>
+                            </div>
+                            <div className="flex">
+                                <span className="w-16 shrink-0 pr-6 text-right select-none text-[#3A3F55]">{skill.stack.length + 10}</span>
+                                <code className="whitespace-pre text-[#E6E8EF]"><span className="text-[#8B8AFF]">export default </span><span className="text-[#7DD3FC]">{fileNames[skill.category]}</span>;</code>
                             </div>
                         </div>
                     ))}
+                </div>
+
+                <div className="bg-[#0A0B11] border-t border-[#1C1F2E] px-6 py-4 font-mono text-sm leading-7">
+                    <p className="text-[11px] tracking-[0.2em] text-[#6E7489] mb-2">TERMINAL</p>
+
+                    {skills.filter(s => s.category === tap).map((skill) => (
+                        <div key={skill.category}>
+                            <p className="whitespace-pre">
+                                <span className="text-[#8B8AFF]">wassim@portfolio</span>
+                                <span className="text-[#6E7489]">:~$ </span>
+                                <span className="text-[#E6E8EF]">npm run skills -- --{fileNames[skill.category]}</span>
+                            </p>
+                            <p className="whitespace-pre">
+                                <span className="text-[#A6E3A1]">✓ </span>
+                                <span className="text-[#C9CDD8]">{skill.stack.length} technologies chargées · {skill.usedIn.length} projet{skill.usedIn.length > 1 ? "s" : ""}</span>
+                            </p>
+                        </div>
+                    ))}
+
+                    <p className="whitespace-pre flex items-center">
+                        <span className="text-[#8B8AFF]">wassim@portfolio</span>
+                        <span className="text-[#6E7489]">:~$ </span>
+                        <span className="inline-block w-2 h-4 bg-[#8B8AFF] animate-pulse" />
+                    </p>
                 </div>
             </div>
         </div>
