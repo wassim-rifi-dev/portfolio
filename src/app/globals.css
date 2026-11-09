@@ -4,15 +4,19 @@
   --animate-blink: blink step-end infinite;
   --animate-marquee: marquee 30s linear infinite;
 
-  @keyframes marquee {
-    to {
-      transform: translateX(-100%);
-    }
-  }
-
   @keyframes blink {
     50% {
       opacity: 0;
     }
+  }
+}
+
+/* Défilement de la ceinture vers la gauche */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
   }
 }

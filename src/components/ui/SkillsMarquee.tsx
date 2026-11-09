@@ -1,15 +1,7 @@
+import { skills } from "@/app/data/skills";
 import { Fragment } from "react";
 
-const defaultItems = [
-    "React.js",
-    "React Native",
-    "Angular",
-    "TypeScript",
-    "JavaScript ES6+",
-    "Next.js",
-    "Node.js",
-    "Tailwind CSS",
-];
+const defaultItems = [...new Set(skills.flatMap((category) => category.stack))];
 
 type SkillsMarqueeProps = {
     items?: string[];
@@ -20,10 +12,13 @@ function Track({ items, hidden = false }: { items: string[]; hidden?: boolean })
         <div
             aria-hidden={hidden}
             className="flex shrink-0 items-center animate-marquee group-hover:[animation-play-state:paused]"
+            style={{ animationDuration: `${items.length * 3}s` }}
         >
             {items.map((item) => (
                 <Fragment key={item}>
-                    <span className="px-12 text-sm whitespace-nowrap text-[#9AA0B2]">{item}</span>
+                    <span className="mx-12 inline-block cursor-default text-sm whitespace-nowrap text-[#9AA0B2] transition-all duration-200 ease-out hover:scale-110 hover:text-[#E6E8EF]">
+                        {item}
+                    </span>
                     <span className="text-[#8B8AFF]">✦</span>
                 </Fragment>
             ))}
