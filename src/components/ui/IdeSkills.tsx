@@ -15,8 +15,8 @@ export default function IdeSkills() {
 
     return (
         <div className="flex">
-            <div className="py-5 border border-[#1A1D28] bg-[#0A0B11]">
-                <div className="border-b border border-[#1A1D28] border-t-0 px-5 flex flex-col gap-3 pb-5">
+            <div className="pt-5 border border-[#1A1D28] bg-[#0A0B11] flex flex-col">
+                <div className="flex-1 border-b border border-[#1A1D28] border-t-0 px-5 flex flex-col gap-3 pb-5">
                     <p className="text-[#6E7489]">EXPLORER</p>
 
                     <div>
