@@ -5,7 +5,7 @@ export const skills: SkillCategory[] = [
         category: "Frontend",
         role: "Interfaces web modernes et responsives",
         stack: ["HTML", "CSS", "JavaScript (ES6+)", "TypeScript", "React.js", "Angular", "Tailwind CSS", "Next.js"],
-        usedIn: [   ],
+        usedIn: [],
     },
     {
         category: "Backend",

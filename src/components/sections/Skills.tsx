@@ -1,5 +1,5 @@
 import { jetbrainsMono } from "@/app/fonts";
-import { Circle } from "lucide-react";
+import { Circle, GitBranch } from "lucide-react";
 import IdeSkills from "../ui/IdeSkills";
 
 export default function Skills() {
@@ -51,7 +51,14 @@ export default function Skills() {
                 <div></div>
             </div>
 
-            <div></div>
+            <div className="flex w-full items-center gap-6 bg-[#8B8AFF] px-4 py-1 text-xs text-[#06070B]">
+                <span className="flex items-center gap-1.5">
+                    <GitBranch className="h-3.5 w-3.5" />
+                    main
+                </span>
+                <span>TypeScript</span>
+                <span>UTF-8</span>
+            </div>
         </section>
     )
 }
