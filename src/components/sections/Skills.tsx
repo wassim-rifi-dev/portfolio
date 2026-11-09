@@ -1,4 +1,5 @@
 import { jetbrainsMono } from "@/app/fonts";
+import { Circle } from "lucide-react";
 
 export default function Skills() {
     return (
@@ -19,6 +20,43 @@ export default function Skills() {
                     </p>
                 </div>
             </div>
+
+            <div className="mt-15 bg-[#0E1020]">
+                <div className="flex justify-between items-center px-4 py-3 border border-[#1A1D28] bg-[#0A0C14]">
+                    <div className="flex items-center gap-1.5">
+                        <span className="w-2.5 h-2.5 rounded-full bg-[#2A2F40]" />
+                        <span className="w-2.5 h-2.5 rounded-full bg-[#2A2F40]" />
+                        <span className="w-2.5 h-2.5 rounded-full bg-[#2A2F40]" />
+                    </div>
+
+                    <p className="text-[#9AA0B2] text-sm font-mono">
+                        wassim-rifi — skills/frontend.ts
+                    </p>
+
+                    <div className="flex gap-1.5 items-center text-[#8B8AFF]">
+                        <span className="relative flex h-2 w-2">
+                            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#8B8AFF] opacity-75" />
+                            <Circle
+                                className="relative z-10 h-2 w-2 fill-[#8B8AFF] text-[#8B8AFF] border-none"
+                            />
+                        </span>
+
+                        <p className="text-xs">live</p>
+                    </div>
+                </div>
+
+                <div>
+                    <div></div>
+                    <div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+
+                <div></div>
+            </div>
+
+            <div></div>
         </section>
     )
 }
